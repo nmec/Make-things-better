@@ -1,0 +1,70 @@
+@import "partials/base";
+@import "compass/css3/images";
+
+@import url(http://fonts.googleapis.com/css?family=Patua+One);
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background: #a1dbff;
+	@include background-image(
+		radial-gradient(center, ellipse cover, #f2faff, #a1dbff 500px)
+	);
+	background-repeat: no-repeat;
+	text-align: center;
+	// overflow: hidden;
+}
+
+.wrapping {
+	display: none;
+	margin: 16px auto;
+	height: 480px;
+	width: 640px;
+}
+
+#betterness {
+	display: block;
+}
+
+@-webkit-keyframes greenPulse {
+	from { -webkit-box-shadow: 0 0 9px #333; }
+	50% { -webkit-box-shadow: 0 0 18px #3e883b; }
+	to { -webkit-box-shadow: 0 0 9px #333; }
+}
+
+.more {
+	@include rem(font-size, 22px);
+	font-family: 'Patua One', cursive;
+	margin: 16px auto;
+}
+
+.pulse {
+	margin: 200px 0 0 0;
+	-webkit-animation-name: greenPulse;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+.footer {
+	color: #444;
+	display: none;
+}
+
+@media (max-width: 767px) {
+	.row-fluid [class*="offset"]:first-child {
+		margin-left: 0;
+	}
+
+	.wrapping,
+	#betterness {
+		height: 240px;
+		width: 320px;
+	}
+	.more {
+		@include rem(font-size, 18px);
+		margin: 100px 0 0 0;
+	}
+}
