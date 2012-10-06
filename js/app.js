@@ -32,7 +32,7 @@ $(document).ready(function() {
 				.slideUp(500)
 				.slideDown(500);
 		}
-
+		_gaq.push(['_trackPageview', 'more-button.htm']);
 		return false;
 	});
 
